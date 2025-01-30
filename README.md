@@ -36,7 +36,7 @@ Nesta aula, vamos:
 Identifique os **Bounded Contexts** do projeto e criar um **Context Map**, definindo as relações entre eles.
 
 📌 **Instruções:**  
-1️⃣ **Escolha um projeto** (real ou fictício). Pode ser um e-commerce, um sistema de saúde, um banco digital, etc.  Ou utilize o seu projeto da aula 1
+1️⃣ **Escolha um projeto** (real ou fictício). Pode ser um e-commerce, um sistema de saúde, um banco digital, etc.  Ou utilize o seu projeto da aula 1.
 2️⃣ **Liste os Bounded Contexts** que fazem parte do sistema.  
 3️⃣ **Defina os relacionamentos** entre os contextos usando os padrões do Context Mapping (**Customer-Supplier, Shared Kernel, Anticorruption Layer, etc.**).  
 4️⃣ **Crie um diagrama** representando o Context Map.  
