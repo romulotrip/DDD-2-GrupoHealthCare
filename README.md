@@ -42,19 +42,21 @@ Identifique os **Bounded Contexts** do projeto e criar um **Context Map**, defin
 4️⃣ **Crie um diagrama** representando o Context Map.  
 5️⃣ **Justifique suas escolhas** (por que cada relacionamento foi modelado dessa forma?).  
 
-📌 **Exemplo de Resposta para o Keller’s Health:**  
 
 | **Origem**               | **Destino**              | **Tipo de Relacionamento**       | **Explicação** |
 |--------------------------|-------------------------|--------------------------------|---------------|
-| Contexto de Consultas    | Contexto de Pagamentos  | **Customer-Supplier**          | O pagamento depende do status da consulta. |
-| Contexto de Cadastro     | Contexto de Consultas   | **Shared Kernel**              | Pacientes e médicos são compartilhados entre os dois contextos. |
-| Contexto de Comunicação  | Contexto de Consultas   | **Conformist**                 | O contexto de comunicação apenas consome dados da consulta para iniciar uma chamada de vídeo. |
-| Contexto de Pagamentos   | Contexto de Consultas   | **Anticorruption Layer (ACL)** | O sistema de consultas traduz dados financeiros sem impactar seu modelo de domínio. |
+| Contexto de Identidade   | Contexto de Jornada do Colaborador  | **Anticorruption Layer (ACL)**          |Para proteger o Contexto da Jornada, uma camada traduz os dados do Acesso, passando apenas informações relevantes como o status "ativo" do usuário e a qual empresa ele pertence, evitando expor o modelo interno de Acesso. |
+| Contexto de Conteúdo     | Contexto de Jornada do Colaborador  | **Customer-Supplier (Cliente-Fornecedor)**              | O Contexto de Jornada (cliente) depende diretamente do Contexto de Conteúdo (fornecedor). A jornada só se torna dinâmica e completa com os materiais fornecidos, ficando incompleta sem eles. |
+| Contexto de Jornada do Colaborador  | Contexto de Comunidade   | **Customer-Supplier**                 | O Contexto de Comunidade (cliente) depende e consome as informações geradas pelo Contexto de Jornada (fornecedor), como as conquistas e os desafios que foram completados pelos usuários, para poder funcionar. |
+| Contexto de Jornada do Colaborador   | Contexto de Análise Corporativa   | **Anticorruption Layer (ACL)** | O Contexto de Análise atua como um adaptador, utilizando uma camada de tradução (ACL) para converter a alta gama de dados brutos da Jornada em KPIs e resultados consolidados para os dashboards das empresas. |
 
 📌 **Formato de Entrega:**  
 - O trabalho pode ser entregue em **Markdown (.md), PDF ou apresentação (PPT)**.  
 - O diagrama pode ser anexado como **imagem** ou **link para uma ferramenta online**.  
 - Entrega via **repositório Git** ou outra plataforma definida pelo professor.  
+
+DIAGRAMA > https://miro.com/app/board/uXjVJDEnjn4=/
+
 
 📌 **Ferramentas para Criar o Diagrama:**  
 - [Miro](https://miro.com/)  
