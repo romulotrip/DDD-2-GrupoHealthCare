@@ -9,14 +9,15 @@
 - **Bounded Contexts**: Separando conceitos e linguagens dentro do domínio.
 
 ### **2️⃣ Identificação dos Subdomínios**
-| **Subdomínio**              | **Descrição**                                                                                      | **Tipo**         |
-|-----------------------------|--------------------------------------------------------------------------------------------------|------------------|
-| Gestão de Consultas         | Gerencia o agendamento, consulta por vídeo e emissão de atestados e receitas.                   | Core Domain      |
-| Cadastro de Pacientes       | Gerencia o cadastro e informações pessoais e médicas dos pacientes.                             | Supporting       |
-| Gerenciamento de Médicos    | Cadastro e validação de médicos, incluindo suas licenças e horários disponíveis.                | Supporting       |
-| Pagamentos                  | Processa pagamentos e gerencia os repasses para médicos e clínicas.                            | Generic          |
-| Comunicação por Vídeo       | Realiza chamadas de vídeo durante as consultas.                                                | Generic          |
-| Autenticação de Usuários    | Gerencia login, permissões e segurança de acesso.                                              | Generic          |
+| **Subdomínio** | **Descrição** | **Tipo** |
+| :--- | :--- | :--- |
+| Gamificação e Jornada | Gerencia os desafios, o progresso (pontuação, ranking, conquistas) e o fluxo da jornada de bem-estar do colaborador. É o diferencial competitivo do negócio. | Core Domain |
+| Gestão de Conteúdo/Missões | Criação, gestão e fornecimento dos materiais educativos, missões e micro-intervenções que alimentam os desafios de bem-estar. | Supporting |
+| Comunidade e Feed | Gerencia a interação social entre os colaboradores (feed de notícias, publicações de conquistas, comentários e curtidas). | Supporting |
+| Cadastro de Colaboradores/Empresas | Gerencia o ciclo de vida das contas corporativas e os perfis detalhados dos colaboradores. | Supporting |
+| Análise de Impacto/Dashboards | Processa os dados de engajamento e saúde para gerar relatórios e KPIs consolidados para os gestores da empresa. | Supporting |
+| Autenticação e Autorização | Gerencia o login, a segurança de senhas e os níveis de permissão dos diferentes tipos de usuários. | Generic |
+| Pagamentos (B2B) | Processa a cobrança e gestão de faturas das empresas clientes (B2B) pela utilização da plataforma. | Generic 
 
 ---
 
